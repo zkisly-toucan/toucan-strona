@@ -189,6 +189,7 @@ found in the <a href="docs/Privacy%20Policy.pdf">Privacy policy</a>. <span class
                             </div>
 
                             <input type="button" value="Wyślij" class="submit-button" onclick="ajaxFormSubmit()">
+                            <div id="snackbar">Dziękujemy! Mail został wysłany</div>
   
                         </form>
                         
@@ -301,6 +302,10 @@ found in the <a href="docs/Privacy%20Policy.pdf">Privacy policy</a>. <span class
                     $('#e-mail').closest('.element-container').find('.validation-error').remove();
                     $('#message').closest('.element-container').find('.validation-error').remove();
                     $('#checkbox-1-1').closest('.element-container').find('.validation-error').remove();
+
+                    var snackbar = document.getElementById("snackbar");
+                    snackbar.className = "show";
+                    setTimeout(function(){ snackbar.className = snackbar.className.replace("show", ""); }, 3000);
                 }
             }
 
