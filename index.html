@@ -175,10 +175,7 @@
                                 <p class="zgoda2 zniknij">Tak, wyrażam zgodę na przetwarzanie danych osobowych podanych przeze mnie w celu realizacji zgłoszenia. Administratorem danych osobowych jest Toucan Systems Sp. z o.o.. Twoje dane będą przetwarzane na podstawie art. 6 ust. 1 lit f) RODO do czasu zakończenia realizacji zgłoszenia. Podanie danych jest dobrowolne, jednakże odmowa ich podania skutkuje brakiem możliwości udzielenia odpowiedzi. Przysługuje Ci prawo do żądania dostępu do danych osobowych, ich sprostowania, usunięcia lub ograniczenia przetwarzania, prawo do wniesienia sprzeciwu wobec przetwarzania. Masz również prawo wniesienia skargi do właściwego Urzędu ds. ochrony danych osobowych. Więcej informacji dot. ochrony danych osobowych znajdziesz  w <a href="docs/Polityka%20prywatno%C5%9Bci.pdf">Polityce prywatności</a>. <span class="mniej">Mniej</span></p>
                             </div>
 
-                            <input type="button" value="Wyślij" class="submit-button" onclick="ajaxFormSubmit()">
-                            <div id="demo-toast-example" class="mdl-js-snackbar mdl-snackbar">
-                              <div class="mdl-snackbar__text"></div>
-                            </div>
+                            <input type="button" value="Wyślij" class="submit-button"  onclick="ajaxFormSubmit()">
   
                         </form>
                         
@@ -196,7 +193,7 @@
         
         <section class="footer">
             <div class="ctnr">
-                <p>Toucan Systems 2018 | <a href="docs/Polityka%20prywatno%C5%9Bci.pdf">Polityka prywatności</a></p>
+                <p>Toucan Systems 2018 | <a href="docs/Polityka%20prywatnosci.pdf">Polityka prywatności</a></p>
             </div>
         </section>
         
@@ -221,12 +218,6 @@
             });
             
             function ajaxFormSubmit() {
-
-                    'use strict';
-
-                    var snackbarContainer = document.querySelector('#demo-toast-example');
-                    var data = {message: 'Dziękujemy! Wiadomość wysłana poprawnie'
-                    snackbarContainer.MaterialSnackbar.showSnackbar(data);
                 var canSend = true;
                 var imieNazwisko = encodeURI(document.getElementById('imie-nazwisko').value);
                 var email = encodeURI(document.getElementById('e-mail').value);
@@ -297,12 +288,6 @@
                     $('#e-mail').closest('.element-container').find('.validation-error').remove();
                     $('#message').closest('.element-container').find('.validation-error').remove();
                     $('#checkbox-1-1').closest('.element-container').find('.validation-error').remove();
-
-                    'use strict';
-
-                    var snackbarContainer = document.querySelector('#demo-toast-example');
-                    var data = {message: 'Example Message # ' + ++counter};
-                    snackbarContainer.MaterialSnackbar.showSnackbar(data);
                 }
             }
 
@@ -375,22 +360,22 @@
 
         </script>
         <script>
-	var header = jQuery(".sticker");
-	var stickerScroll = "stickerScroll";
-	
-	jQuery(document).scroll( function() {
-		if(jQuery(this).scrollTop() > 1) {
-				
-		    header.addClass(stickerScroll);
+    var header = jQuery(".sticker");
+    var stickerScroll = "stickerScroll";
+    
+    jQuery(document).scroll( function() {
+        if(jQuery(this).scrollTop() > 1) {
+                
+            header.addClass(stickerScroll);
 
-		}
-		else {
+        }
+        else {
 
-		    header.removeClass(stickerScroll);
-								
-		}
-	});
-	
+            header.removeClass(stickerScroll);
+                                
+        }
+    });
+    
 </script>
         <script>
             $( ".wiecej" ).click(function() {
@@ -404,6 +389,14 @@
 });
         </script>
 <script src="js/menu.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-35992211-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
 
+gtag('config', 'UA-35992211-1');
+</script>
     </body>
 </html>
